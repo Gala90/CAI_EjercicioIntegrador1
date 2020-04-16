@@ -12,7 +12,7 @@ namespace Solucion.LibreriaNegocio
         
         public Docente(int cod, string nombre, string apellido, DateTime fechaIngreso, string tipo, double salario, string materia) : base(cod,nombre,apellido,fechaIngreso,tipo,salario)
         {
-            
+            this.Materia = materia;
         }
 
         public override string GetNombreCompleto()

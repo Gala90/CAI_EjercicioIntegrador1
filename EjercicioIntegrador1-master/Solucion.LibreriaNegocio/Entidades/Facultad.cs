@@ -86,5 +86,34 @@ namespace Solucion.LibreriaNegocio
 
             this.Empleados.Add(empleado);
         }
+
+        public void EliminarEmpleado(int leg)
+
+        { 
+                            foreach (Empleado e in Empleados)
+                    {
+                        if (e.Legajo == leg)
+                            Empleados.Remove(e);
+        
+                    }
+
+        }
+    
+        public void EliminarAlumno(int cod)
+
+        {
+            foreach (Alumno a in Alumnos)
+            {
+                if (a.Codigo == cod)
+                    Alumnos.Remove(a);
+            }
+        }
+
+
+
+
+
     }
+
+
 }

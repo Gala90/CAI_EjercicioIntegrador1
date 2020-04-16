@@ -18,6 +18,14 @@ namespace Solucion.LibreriaNegocio.Entidades
         public DateTime Fecha { get => _fecha; set => _fecha = value; }
         public string CodigoTransferencia { get => _codigoTransferencia; set => _codigoTransferencia = value; }
 
+        public Salario (double bruto)
+        {
+            this._bruto = bruto;
+            this._descuentos = bruto * 0.17;
+            this._fecha = DateTime.Now;
+            this._codigoTransferencia = "123";
+        }
+
         public double GetSalarioNeto()
         {
             return _bruto - _descuentos;

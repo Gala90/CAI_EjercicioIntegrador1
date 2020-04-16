@@ -122,12 +122,7 @@ namespace Solucion.Consola
                 }
                 else
                 {
-                    foreach (Empleado e in fce.Empleados)
-                    {
-                        if (e.Legajo == leg)
-                            fce.Empleados.Remove(e);
-                    }
-
+                    fce.EliminarEmpleado(leg);
                 }
 
             }
@@ -147,7 +142,7 @@ namespace Solucion.Consola
                 int c = ConsolaHelper.PedirInt("Legajo");
                 string t = ConsolaHelper.PedirString("tipo empleado (D docente, B bedel, A directivo)");
                 DateTime f = ConsolaHelper.PedirFecha("Ingreso laboral");
-                double s = ConsolaHelper.PedirDouble("Salario");
+                double s = ConsolaHelper.PedirDouble("Salario Bruto");
 
                 string ap = string.Empty;
                 if (t.ToUpper() == "B")
@@ -195,12 +190,7 @@ namespace Solucion.Consola
                     Console.WriteLine("El alumno no pertenece a la facultad.");
                 } else
                 {
-                    foreach (Alumno a in fce.Alumnos)
-                    {
-                        if (a.Codigo == cod)
-                            fce.Alumnos.Remove(a);
-                    }
-
+                    fce.EliminarAlumno(cod);
                 }
 
             }
